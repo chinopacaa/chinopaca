@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bitacora Parcial #2</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title has-text-centered">Bitácora Parcial #2</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu is-justify-content-space-between">
+            <div class="navbar-start">
+
+                <a class="navbar-item" href="#Flexbox">
+                    Flexbox
+                </a>
+
+                <a class="navbar-item" href="#Width">
+                    Propiedad Width
+                </a>
+
+                <a class="navbar-item" href="#SVG">
+                    SVG
+                </a>
+
+                <a class="navbar-item" href="CSS">
+                    Variables CSS
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    <section class="section ideasprincipales">
+        <h2 id="Flex" class="title is-3">Ideas Principales</h2>
+        <h3 class="subtitle is-4" id="Flexbox">Módulo Flexbox</h3>
+        <div class="content">
+            <p>
+                Tiene como objetivo proporcionar una manera más eficiente de diseñar, alinear y distribuir el espacio
+                entre los elementos en un contenedor, incluso cuando el tamaño es desconocido o dinámico. La idea
+                principal es otorgar al contenedor la capacidad de modificar ancho, alto y el orden de los elementos
+                para llenar mejor el espacio.
+                Un contenedor flexible expande los elementos o los reduce para evitar el desbordamiento. Lo más
+                importante es que su diseño es independiente de la dirección en lugar de los diseños regulares. <br>
+                <strong>Flex-direction:</strong>
+                Esta propiedad establece el eje principal en el que se colocarán los elementos dentro del contenedor
+                flexible. <br>
+                <strong>Valores:</strong>
+            <ul>
+                row: Los elementos se organizan de izquierda a derecha (valor predeterminado).
+            </ul>
+            <ul>
+                row-reverse: Los elementos se organizan de derecha a izquierda.
+            </ul>
+            <ul>
+                column: Los elementos se organizan de arriba hacia abajo en forma de columnas.
+            </ul>
+            <ul>
+                column-reverse: Los elementos se organizan en columnas, pero de abajo hacia arriba.
+            </ul>
+            <strong>Flex-wrap</strong>
+            Define si los elementos dentro del contenedor deben mantenerse en una sola línea o pueden envolver en varias
+            líneas según sea necesario. <br>
+            <strong>Valores:</strong>
+            <ul>nowrap: Todos los elementos intentarán mantenerse en una sola línea, aunque esto pueda causar
+                desbordamiento (valor predeterminado).</ul>
+            <ul>wrap: Los elementos se distribuyen en múltiples filas o columnas si es necesario, evitando el
+                desbordamiento.</ul>
+            <ul>wrap-reverse: Similar a wrap, pero los elementos se colocan en sentido inverso, envolviendo hacia arriba
+                en lugar de hacia abajo.</ul>
+
+            <strong>Flex-flow</strong>
+            Es una abreviatura para combinar las propiedades flex-direction y flex-wrap. Permite definir simultáneamente
+            la dirección principal y si los elementos deben envolverse. <br>
+            <strong>Justify-content</strong>
+            Controla la alineación de los elementos a lo largo del eje principal (horizontal para row o vertical para
+            column). Esta propiedad es útil para distribuir los elementos cuando hay más espacio disponible que el
+            necesario. <br>
+            <strong>Valores:</strong>
+            <ul>flex-start: Los elementos se alinean al inicio del contenedor.</ul>
+            <ul>flex-end: Los elementos se alinean al final del contenedor.</ul>
+            <ul>center: Los elementos se centran en el contenedor.</ul>
+            <ul>space-between: El primer y último elemento se alinean en los extremos del contenedor, mientras que los
+                demás se distribuyen uniformemente.</ul>
+            <ul>space-around: Los elementos se distribuyen uniformemente con espacios iguales alrededor de cada uno.
+            </ul>
+            <strong>Align-items</strong>
+            Similar a justify-content, pero aplicado en el eje transversal (perpendicular al principal). Define cómo se
+            alinean los elementos dentro del contenedor en el eje vertical cuando flex-direction es row. <br>
+            <strong>Valores:</strong>
+            <ul>stretch: Los elementos se estiran para llenar el espacio vertical disponible (valor predeterminado).
+            </ul>
+            <ul>flex-start, flex-end, center: Similar a los valores de justify-content, pero aplicados al eje
+                transversal.</ul>
+            <ul>baseline: Los elementos se alinean a lo largo de su línea base.</ul>
+            <strong>Align-content</strong>
+            Esta propiedad afecta la alineación de las filas o columnas en contenedores flexibles con múltiples líneas
+            (cuando se usa flex-wrap: wrap). No tiene efecto si solo hay una línea de elementos. <br>
+            <strong>Valores:</strong>
+            <ul>flex-start, flex-end, center, space-between, space-around: Funciona de manera similar a justify-content,
+                pero para las líneas dentro del contenedor.</ul>
+            </p>
+        </div>
+    </section>
+
+    <section class="columns is-desktop">
+        <!-- Sección de Notas -->
+        <div id="derecha" class="column is-half">
+            <h2 class="title is-3">Notas</h2>
+            <div class="content">
+                <p>
+                    <strong>Conocer las propiedades:</strong> Es importante tener claro el funcionamiento y los valores
+                    predeterminados
+                    de cada propiedad para evitar errores. Una mala configuración puede generar problemas como
+                    desbordamientos o una alineación incorrecta de los elementos. <br>
+
+                    <strong>Flexbox es unidireccional:</strong> Solo gestiona una dirección a la vez, ya sea horizontal
+                    o vertical, lo
+                    que significa que no es la mejor opción para layouts complejos de múltiples ejes. Para esos casos,
+                    Grid Layout es más adecuado. <br>
+                </p>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+
+        <!-- Sección de Fotos Bitácora -->
+        <div class="column is-half">
+            <h2 class="title is-3">Bitácora</h2>
+            <div class="image is-4by3">
+                <a href="img/flexbox.svg">
+                    <img src="img/flexbox.svg" alt="Flexbox" title="">
+                </a>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="title is-4 has-text-centered">Resumen</h2>
+        <div class="content has-text-centered" class="">
+            <p has-text-white>
+                La idea clave detrás de Flexbox es que el contenedor flexible puede modificar las propiedades de ancho,
+                alto y el orden de sus elementos internos para adaptarse de manera óptima al espacio disponible, algo
+                que los diseños tradicionales no permiten de forma sencilla.
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!--    Width     -->
+
+
+    <header>
+        <h1 class="title has-text-centered">Bitácora Parcial #2</h1>
+    </header>
+
+<!-- <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarExample1">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarExample1" class="navbar-menu is-justify-content-space-between">
+        <div class="navbar-start">
+            <a class="navbar-item" href="#Flexbox">Flexbox</a>
+            <a class="navbar-item" href="#Width">Propiedad Width</a>
+            <a class="navbar-item" href="#SVG">SVG</a>
+            <a class="navbar-item" href="#CSS">Variables CSS</a>
+        </div>
+    </div>
+</nav> -->
+
+    <section class="section ideasprincipales">
+        <h2 id="Flex" class="title is-3">Ideas Principales</h2>
+        <h3 class="subtitle is-4" id="Width">Propiedad Width</h3>
+        <div class="content">
+            <p>
+                <strong>Propiedad max-width:</strong> la imagen se puede reducir, pero esta no se amplía más allá de sus
+                dimensiones
+                originales. Esto nos puede ayudar a que la imagen no pierda la calidad por aumentar sus dimensiones, sin
+                embargo, el problema es que quedan espacios en blanco cuando llegue a sus dimensiones máximas. <br>
+                <strong>Imágenes de fondo:</strong> las imágenes de fondo también pueden aumentar y reducir su tamaño.
+                Con la propiedad
+                background-size: 100% 100% la imagen se ajustara al elemento contenedor, sin embargo la imagen deberá
+                adaptarse sin distorsionarse. <br>
+                <strong>Backgorund-size:</strong> cover: mantiene la relación de aspecto pero la imagen se puede
+                recortar cuando se
+                aumenta o disminuye el tamaño del dispositivo. Con background-position se puede ajustar el enfoque que
+                hará background-size: cover. <br>
+                Por medio de los media queries podemos cambiar la imagen cuando se llegue al max-width especificado,
+                siempre y cuando este como una imagen de fondo. Sin embargo dentro del HTML también se puede cambiar. El
+                elemento picture, ajustara el tamaño de la imagen, lo que se hace es colocar mediante los atributos
+                source srcste seguido de media:”(max-width)”. Luego la siguiente imagen con su respectivo
+                media:”(max-width)” y por último la imagen original solo con img src=.
+
+            </p>
+        </div>
+    </section>
+
+    <section class="columns is-desktop">
+        <!-- Sección de Notas -->
+        <div id="derecha" class="column is-half">
+            <h2 class="title is-3">Notas</h2>
+            <div class="content">
+                <p>
+                    <strong>Max-width:</strong>
+                    Reduce la imagen sin aumentar más allá de su tamaño original.
+                    Mantiene la calidad de la imagen, pero puede dejar espacios en blanco en el contenedor. <br>
+                    <strong>Imágenes de Fondo:</strong>
+                    background-size: 100% 100%: Ajusta la imagen al contenedor, pero puede distorsionarla. <br>
+                    background-size: cover: Mantiene la relación de aspecto; puede recortar la imagen. <br>
+                    background-position: Ajusta el enfoque de la imagen cuando se usa background-size: cover. <br>
+                    <strong>Media Queries:</strong>
+                    Cambian la imagen de fondo al alcanzar un max-width especificado. <br>
+                    <strong>Elemento picture:</strong>
+                    Permite cambiar imágenes según el tamaño de pantalla usando source con media: "(max-width)".
+                </p>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+
+        <!-- Sección de Fotos para la Bitácora -->
+        <div class="column is-half">
+            <h2 class="title is-3">Bitácora</h2>
+            <div class="image is-4by3">
+                <a href="img/width.svg">
+                    <img src="img/width.svg" alt="Flexbox" title="">
+                </a>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="title is-4 has-text-centered">Resumen</h2>
+        <div class="content has-text-centered" class="">
+            <p>
+                <strong>Max-width:</strong> Ayuda a mantener la calidad de la imagen y evita que se amplíe más allá de
+                sus dimensiones
+                originales. <br>
+                <strong>background-size:</strong> Controla cómo se muestra la imagen de fondo, con opciones para cubrir
+                y ajustar sin
+                distorsión. <br>
+                <strong>Media Queries y picture:</strong> Herramientas fundamentales para un diseño responsivo,
+                permitiendo cambios en
+                las imágenes según el tamaño del dispositivo.
+            </p>
+        </div>
+    </footer>
+
+
+
+    <header>
+        <h1 class="title has-text-centered">Bitácora Parcial #2</h1>
+    </header>
+ 
+    <section class="section ideasprincipales">
+        <h2 id="Flex" class="title is-3">Ideas Principales</h2>
+        <h3 class="subtitle is-4" id="SVG">Gráficos Vectoriales Escalables (SVG)</h3>
+        <div class="content">
+            <p>
+                SVG es un lenguaje de marcado para describir imágenes y aplicaciones de gráficos bidimensionales y un
+                conjunto de interfaces. Se convirtió en una recomendación W3C siendo un lenguaje libre de derechos de
+                autor de uso generalizado. <br>
+                La versión 2 se encuentra en desarrollo e integrara con HTML, CSS y DOM.
+                Los archivos SVG son gráficos vectoriales bidimensionales tanto estáticos como animados en formato XML y
+                se puede utilizar con imágenes como formas. Son compactos y ofrecen gráficos de buena calidad, está
+                basado en XML y se puede usar para crear gráficos web que respondan a acciones del usuario.
+
+
+            </p>
+        </div>
+    </section>
+
+    <section class="columns is-desktop">
+        <!-- Sección de Notas -->
+        <div id="derecha" class="column is-half">
+            <h2 class="title is-3">Notas</h2>
+            <div class="content">
+                <p>
+                    <ul>SVG (Scalable Vector Graphics) es un lenguaje de marcado para describir gráficos bidimensionales.</ul>
+                    <ul>Se convirtió en estándar del W3C y es un lenguaje libre de derechos de autor.</ul>
+                    <ul> La versión 2 de SVG está en desarrollo e integrará mejor con HTML, CSS y DOM.</ul>
+                </p>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+
+        <!-- Sección de Fotos Bitácora -->
+        <div class="column is-half">
+            <h2 class="title is-3">Bitácora</h2>
+            <div class="image is-4by3">
+                <a href="img/SVG.svg">
+                    <img src="img/SVG.svg" alt="Flexbox" title="">
+                </a>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="title is-4 has-text-centered">Resumen</h2>
+        <div class="content has-text-centered" class="">
+            <p>
+                SVG es un lenguaje de marcado para describir imágenes y aplicaciones de gráficos bidimensionales y un
+                conjunto de interfaces. Se convirtió en una recomendación W3C siendo un lenguaje libre de derechos de
+                autor de uso generalizado.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+
+    </script>
+    
+
+</body>
+
+</html>
