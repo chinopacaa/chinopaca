@@ -1,0 +1,54 @@
+.grid-container{
+    display: grid;
+    width: 100%;
+    height: 1600px;
+    background-color: black;
+    padding: 10px;
+    gap: 10px;
+    grid-row: 1fr 0.5fr 2fr 2fr 1fr;
+   grid-template-areas: 
+   "header header header header"
+   "nav nav nav nav"
+   "banner banner banner aside"
+   "card1 card2 card3 aside"
+   "footer footer footer footer"
+   ;
+}
+
+header{
+    grid-area: header;
+    background-color: bisque;
+}
+nav{
+    grid-area: nav;
+    background-color: bisque;
+}
+.grid-banner{
+    grid-area: banner;
+    background-color: bisque;
+}
+.card1{
+    grid-area: card1;
+    background-color: bisque;
+}
+.card2{
+    grid-area: card2;
+    background-color: bisque;
+}
+.card3{
+    grid-area: card3;
+    background-color: bisque;
+}
+aside{
+    grid-area: aside;
+    background-color: bisque;
+}
+footer{
+    grid-area: footer;
+    background-color: bisque;
+}
+
+
+
+
+
